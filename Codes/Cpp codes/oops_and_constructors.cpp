@@ -6,7 +6,7 @@ class Rectangle{
     int length;
     int breadth;
 
-    public
+    public:
     Rectangle(){          // default constructor
         int length = 0;
         int breadth = 0;
@@ -34,13 +34,17 @@ class Rectangle{
     int getbreadth(){      // Accessor
         return breadth;
     }
+
+    ~Rectangle(){
+        cout<<"Destructor called"<<endl;
+    }
 };
 
 int main(){
     Rectangle r{10 , 2}; // object definition
 
     cout<<"Area "<<r.area()<<endl;          // see how function is accessed using r.area() ie without passsing any arguement
-    cout<<"Perimeter"<<r.perimeter();
+    cout<<"Perimeter"<<r.perimeter()<<endl;
     
     return 0;
 }
