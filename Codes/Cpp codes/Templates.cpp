@@ -8,23 +8,27 @@ class arithmetic{
     int b;
 
     public:
-    arithmetic(int a , int b){
+
+    arithmetic(int a , int b);
+    int add();
+    int sub();
+
+};    
+    arithmetic::arithmetic(int a , int b){
         this->a = a;  // this-> is pointer to the current object
         this->b = b;  // this-> is pointer to the current object
     }
-
-    int add(){
+    int arithmetic :: add(){
         int c=0;
         c = a+b;
         return c;
     }
 
-    int sub(){
+    int arithmetic :: sub(){
         int d=0;
         d = a-b;
         return d;
     }
-};
 
 int main(){
     arithmetic arr1{10,3} , arr2{12,4};
