@@ -1,37 +1,43 @@
 #include<iostream>
 using namespace std;
 
+template <class T>
 class arithmetic{
 
     private:
-    int a;
-    int b;
+    T a;
+    T b;
 
     public:
 
-    arithmetic(int a , int b);
-    int add();
-    int sub();
+    arithmetic(T a , T b);
+    T add();
+    T sub();
 
-};    
-    arithmetic::arithmetic(int a , int b){
+};   
+    template <class T>
+    arithmetic<T>::arithmetic(T a , T b){         // :: is known as the scope resolution
         this->a = a;  // this-> is pointer to the current object
         this->b = b;  // this-> is pointer to the current object
     }
-    int arithmetic :: add(){
-        int c=0;
+
+    template <class T>
+    T arithmetic<T> :: add(){
+        T c=0;
         c = a+b;
         return c;
     }
 
-    int arithmetic :: sub(){
-        int d=0;
+    template <class T>
+    T arithmetic <T>:: sub(){
+        T d=0;
         d = a-b;
         return d;
     }
 
 int main(){
-    arithmetic arr1{10,3} , arr2{12,4};
+    arithmetic <int> arr1{10,3} ;
+    arithmetic <float> arr2{1.2,0.4};
 
     cout<<arr1.add()<<endl;
     cout<<arr2.sub()<<endl;
