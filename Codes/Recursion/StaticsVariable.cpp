@@ -24,7 +24,9 @@ int main(){
     int a =5;
     int r = fun(a);
     int k = fun1(a);
+    int l = fun1(a);
     cout<<r<<endl;
     cout<<k<<endl;
+    cout<<l<<endl;
     return 0;
 }
