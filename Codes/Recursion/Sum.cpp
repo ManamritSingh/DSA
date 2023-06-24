@@ -12,9 +12,9 @@ int recursion(int n){  // O(n) time but makes stack so takes a lot of space
 
 int loop(int n){  // O(n) time ans space is just the 3 variables it makes
 int s =0;
-for (int i = 0; i < n; i++)
+for (int i = 0; i <= n; i++)
 {
-    s = s+1; 
+    s = s+i; 
 }
 return s;
 }
