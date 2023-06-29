@@ -8,7 +8,10 @@ int main(){
     {
         cout<<A[i]<<endl;
     }
-    
+    for (int i = 0; i < 5; i++) // addresses in hex
+    {
+        cout<<&A[i]<<endl;
+    }
 
     cout<<A[3]<<endl;
     cout<<3[A]<<endl;
