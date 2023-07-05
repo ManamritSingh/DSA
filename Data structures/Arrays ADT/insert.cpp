@@ -26,11 +26,13 @@ void append(struct appendArray *arr, int x){
 
     if(arr->length<arr->size){
         cout<<"appending..."<<endl;
-        cout<<"Result0 "<<arr->A[arr->length]<<endl;
-        arr->length++;
+
         arr->A[arr->length]=x;
+        //cout<<"Result0 "<<arr->A[arr->length]<<endl;
         //arr->length++;
-        cout<<"Result "<<arr->A[arr->length];
+       //arr->A[arr->length]=x;
+       // //arr->length++;
+       // cout<<"Result "<<arr->A[arr->length];
     }
 }
 
