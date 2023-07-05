@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//code for insert operation
 class arraADT{
 private:
 
@@ -54,7 +54,7 @@ void arraADT::insert(int index , int x){
     {
         A[i]=A[i-1];
     }
-    A[index]=x;
+    A[index]=x; 
 }
 int main(){
     arraADT arr(10);
