@@ -1,10 +1,12 @@
 #include<iostream>
 using namespace std;
+// linear search 
 
 class linearsearch{
 private:
 
 int *A;
+
 int length;
 int size;
 
