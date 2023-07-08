@@ -1,5 +1,7 @@
 // duplicates using hashing
 
+// works on both sorted an unsorted arrays
+
 #include<iostream>
 using namespace std;
 
@@ -96,7 +98,7 @@ duplicates::~duplicates()
 
 int main(){
 
-    duplicates arr(10);
+    duplicates arr(20);
     arr.create();
     arr.display();
     arr.finduplicate();
