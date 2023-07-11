@@ -1,7 +1,5 @@
 // finding duplicate elemnts
 
-// code for find multiple missing elements in a sorted array
-
 #include<iostream>
 using namespace std;
 
