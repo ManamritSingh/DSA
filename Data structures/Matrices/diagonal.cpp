@@ -12,6 +12,9 @@ public:
     diagonal(int n);
     void create();
     void display();
+    // now fxns required to later access the matrix
+    void set(int i , int j , int x);
+    int get(int i , int j);
     ~diagonal();
 };
 
@@ -58,7 +61,29 @@ void diagonal::display(){
         cout<<endl;
         
     }
+    cout<<endl;
+}
+
+void diagonal::set(int i , int j , int x){
+
+    if(i==j){
+        A[i-1]=x;
+    }
+    else if (i!=j)
+    {
+        cout<<"are ya crazy mate ?"<<endl;
+    }
     
+}
+
+int diagonal::get(int i , int j){
+    if (i==j)
+    {
+        return A[i-1];
+    }
+    else{
+        return 0;
+    }
 }
 
 diagonal::~diagonal()
@@ -70,6 +95,9 @@ int main(){
     diagonal ele(3);
     ele.create();
     ele.display();
+    ele.set(3,3,9);
+    ele.display();
+    cout<<"element @ 2,2 is "<<ele.get(2,2);
     
     return 0;
 }
