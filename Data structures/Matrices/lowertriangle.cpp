@@ -41,9 +41,7 @@ void lowertriangle::create(){
                 cin>>x;
                 A[(i*(i-1)/2)  + (j-1)]=x;
             }  
-        }
-        
-        
+        }   
     }
     
 }
