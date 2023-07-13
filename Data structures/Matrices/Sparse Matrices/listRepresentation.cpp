@@ -32,26 +32,31 @@ class sparse{
         delete []ele;
     }
 
-    void read(){
+    friend ostream& operator << ( ostream &os , sparse &s);
+    friend istream& operator>>(istream &is , sparse &s);
+
+};    
+
+    istream& operator>>(istream &is , sparse &s){
 
         cout<<"Enter places followed by element [format(i j x)] :"<<endl;
 
-        for (int i = 0; i < num; i++)
+        for (int i = 0; i < s.num; i++)
         {
-            cin>>ele[i].i>>ele[i].j>>ele[i].x;
+            cin>>s.ele[i].i>>s.ele[i].j>>s.ele[i].x;
         }
-        
+       return is; 
     }
 
-    void display(){
+    ostream& operator << ( ostream &os , sparse &s){
         int k=0;
-        for (int i = 0; i < m; i++)
+        for (int i = 0; i < s.m; i++)
         {
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < s.n; j++)
             {
-                if (ele[k].i==i && ele[k].j==j)
+                if (s.ele[k].i==i && s.ele[k].j==j)
                 {
-                    cout<<ele[k++].x<<" ";
+                    cout<<s.ele[k++].x<<" ";
                 }
                 else{
                     cout<<"0 ";
@@ -59,15 +64,14 @@ class sparse{
             }
             cout<<endl;
         }
-        
+        return os;
     }
 
-};
 
 int main(){
     sparse s(5,5,3);
-    s.read();
-    s.display();
+    cin>>s;
+    cout<<s;
     
     return 0;
 }
