@@ -70,9 +70,9 @@ int main()
     int A[] = {3, 5, 7, 10, 25, 8, 32, 2};
     L.create(A, 8);
 
-    cout<<"no of elements are "<<L.sum()<<endl;
+    cout<<"sum of elements are "<<L.sum()<<endl;
 
-    cout<<"counted using loop "<<L.sumloop(L.first)<<endl;
+    cout<<"sum using loop "<<L.sumloop(L.first)<<endl;
 
     return 0;
 }
