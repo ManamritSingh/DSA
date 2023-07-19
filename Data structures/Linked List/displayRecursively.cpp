@@ -8,6 +8,16 @@ class node
 public:
     int data;
     node* next;
+
+    void display(node* p){
+
+        if (p != nullptr)
+        {
+            cout<<p->data<<" ";
+            display(p->next);
+        }
+        
+    }
 };
 
 
@@ -36,13 +46,8 @@ int main() {
         last = temp;
     }
 
-    // code to display the ll
-    node* p =head;
-
-    while (p!= nullptr)
-    {
-        cout<<p->data<<" "<<flush;
-        p=p->next;
-    }
+    node n;
+    n.display(head);
+    
     return 0;
 }
