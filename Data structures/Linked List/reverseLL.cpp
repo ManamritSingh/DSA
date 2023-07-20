@@ -81,14 +81,31 @@ public:
             i--;
         }
     }
+
+    // reversing the links
+
+    void reverse2(node *p){
+
+        node *q = NULL , *r = NULL;
+        while (p!=NULL)
+        {
+            r=q;
+            q=p;
+            p=p->next;
+            q->next=r;
+        }
+        q=first;
+    }
+
+    
 };
 
 int main() {
     int A[]={1,1,2,2,3};
     linkedlist l;
-    l.create(A , 5);
+    l.create(A , 5); 
     l.display(l.first);
-    l.reverse1(l.first);
+    l.reverse2(l.first);
     l.display(l.first);
     
     return 0;
