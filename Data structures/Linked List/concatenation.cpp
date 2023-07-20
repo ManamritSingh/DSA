@@ -1,5 +1,3 @@
-// delete duplicate elements from ll
-
 #include <iostream>
 using namespace std;
 
