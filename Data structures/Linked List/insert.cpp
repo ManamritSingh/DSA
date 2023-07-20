@@ -1,7 +1,5 @@
 // 2 ways to insert 1. on index before the 1st node and 2. after any given node
 
-// linear search with move to head
-
 #include <iostream>
 using namespace std;
 
@@ -91,7 +89,6 @@ public:
 int main()
 {
     LinkedList L;
-    Node *temp;
     int A[] = {3, 5, 7, 10, 25, 8, 32, 2};
     L.create(A, 8);
     L.display(L.first);
