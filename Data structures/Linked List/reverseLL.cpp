@@ -97,7 +97,15 @@ public:
         q=first;
     }
 
-    
+    void reverse3(node *p , node *q){
+        if(p){
+            reverse3(p , p->next);
+            p->next=q;
+        }
+        else{
+            first=q;
+        }
+    }
 };
 
 int main() {
@@ -105,7 +113,7 @@ int main() {
     linkedlist l;
     l.create(A , 5); 
     l.display(l.first);
-    l.reverse2(l.first);
+    l.reverse3(NULL,l.first);
     l.display(l.first);
     
     return 0;
