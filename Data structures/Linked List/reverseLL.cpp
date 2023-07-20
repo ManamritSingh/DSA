@@ -94,10 +94,10 @@ public:
             p=p->next;
             q->next=r;
         }
-        q=first;
+        first=q;
     }
 
-    void reverse3(node *p , node *q){
+    void reverse3(node *q , node *p){
         if(p){
             reverse3(p , p->next);
             p->next=q;
@@ -113,7 +113,7 @@ int main() {
     linkedlist l;
     l.create(A , 5); 
     l.display(l.first);
-    l.reverse3(NULL,l.first);
+    l.reverse2(l.first);
     l.display(l.first);
     
     return 0;
