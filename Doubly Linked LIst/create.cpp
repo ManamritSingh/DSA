@@ -17,9 +17,10 @@ private:
 
 public:
     doublyLL();
-    doublyLL(int *A , int n);
+    doublyLL(int A[] , int n);
     //~doublyLL();
     void Display();
+    int length();
 };
 
 doublyLL::doublyLL() {
@@ -29,7 +30,7 @@ doublyLL::doublyLL() {
     head->next = nullptr;
 }
 
-doublyLL::doublyLL(int *A , int n){
+doublyLL::doublyLL(int A[] , int n){
 
     head = new node;
     head->prev=nullptr;
@@ -53,10 +54,21 @@ void doublyLL::Display(){
     node *p = head;
     while (p != nullptr)
     {
-        cout<<p->next<<" ";
+        cout<<p->data<<" ";
         p=p->next;
     }
     cout<<endl;
+}
+
+int doublyLL::length(){
+    node *p =head;
+    int len =0;
+    while (p!= nullptr)
+    {
+        len++;
+        p=p->next;
+    }
+    return len;
 }
 
 
@@ -65,6 +77,6 @@ int main() {
     int A[]={1,2,3,4,5};
     doublyLL c(A,5);
     c.Display();
-    
+    cout<<"length is "<<c.length()<<endl;
     return 0;
 }
