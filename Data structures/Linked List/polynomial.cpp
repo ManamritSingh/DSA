@@ -50,12 +50,19 @@ void polynomial::display(){
 
     while (p)
     {
-        cout<<p->coef<<"x^"<<p->exp;
+        if (p->exp==0)
+        {
+            cout<<p->coef;
+            p=p->next;
+        }
+        else{
+            cout<<p->coef<<"x^"<<p->exp;
         if (p->next != nullptr)
         {
-            cout<<" +";
+            cout<<" + ";
         }
         p=p->next;
+        }
         
     }
     
