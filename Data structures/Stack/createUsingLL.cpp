@@ -22,6 +22,7 @@ public:
     int isfull();
     int isempty();
     int stacktop();
+    int peek(int index);
 };
 
 void stack::push(int n){
@@ -85,6 +86,25 @@ int stack::isempty(){
     return 0;
 }
 
+int stack::peek(int index){
+    int x=-1;
+
+    node *p = new node;
+    p=top;
+    for (int i = 0; i < index-1; i++)
+    {
+        p=p->next;
+    }
+    if (index < 0 || p==nullptr )
+    {
+        cout<<"invalid index"<<endl;
+    }
+    else{
+        x=p->data;
+    }
+    return x;
+}
+
 int stack::stacktop(){
 
     if (top==nullptr)
@@ -99,10 +119,10 @@ int main() {
     int n;
 
     stack st;
-    cout<<"Enter size of stack";
+    cout<<"Enter size of stack"<<endl;
     cin>>n;
     int A[n];
-    cout<<"Enter elements";
+    cout<<"Enter elements"<<endl;
     for (int i = 0; i < n; i++)
     {
         cin>>A[i];
@@ -122,6 +142,7 @@ int main() {
 
     cout<<st.stacktop()<<endl;
     cout<<st.isfull()<<endl;
+    cout<<st.peek(4)<<endl;
 
     st.pop();
     st.pop();
