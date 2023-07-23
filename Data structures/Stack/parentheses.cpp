@@ -119,7 +119,7 @@ int stack::balanceCheck(const char *str){
 
     for (int i = 0; str[i] != '\0'; i++)
     {
-        if (str[i]=='(')
+        if (str[i]=='('  || str[i]=='[' || str[i]=='{')
         {
             push(str[i]);
         }
@@ -131,9 +131,51 @@ int stack::balanceCheck(const char *str){
             }
             else
             {
-                pop();
+                if (pop()=='(')
+                {
+                    continue;
+                }
+                else{
+                    return -1;
+                }
+                
             }
-        }   
+        }
+        else if (str[i]==']')
+        {
+            if (isempty())
+            {
+                return -1;
+            }
+            else
+            {
+                if (pop()=='[')
+                {
+                    continue;
+                }
+                else{
+                    return -1;
+                }
+                
+            }
+        } 
+        else if (str[i]=='}')
+        {
+            if (isempty())
+            {
+                return -1;
+            }
+            else
+            {
+                if (pop()=='{')
+                {
+                    continue;
+                }
+                else{
+                    return -1;
+                }    
+            }
+        }    
     }
     if (isempty())
     {
@@ -149,7 +191,7 @@ int stack::balanceCheck(const char *str){
 int main() {
     int n;
 
-    const char *exp = "((a+b)*(c-d))";
+    const char *exp = "([a+b]*{c-d])";
 
     stack st;
     cout<<st.balanceCheck(exp);
