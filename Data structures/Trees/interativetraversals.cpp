@@ -292,7 +292,7 @@ void tree::iterativePostorder(Node *p){
             }
         }
     }
-    cout<endl;
+    cout<<endl;
 }
 
 int main(){
