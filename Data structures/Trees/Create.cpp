@@ -176,7 +176,7 @@ void tree::postorder(Node *p){
     }
 }
 
-void tree::levelorder(Node *p){
+void tree::levelorder(Node *p){ // procedure for level order
     Queue q(100);
     cout<<root->data<<" ";
     q.enqueue(root);
