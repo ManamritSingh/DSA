@@ -223,13 +223,14 @@ tree::~tree(){
 int main(){
     tree t;
     t.createTree();
-    cout<<"preorder"<<endl;
-    t.preorder();
-    cout<<endl;
-    cout<<"inorder"<<endl;
-    t.inorder();
-    cout<<endl;
-    cout<<"postorder"<<endl;
-    t.postorder();
-    cout<<endl;
+    cout<<"levelorder"<<endl;
+    t.levelorder();
+    //cout<<endl;
+    //cout<<"inorder"<<endl;
+    //t.inorder();
+    //cout<<endl;
+    //cout<<"postorder"<<endl;
+    //t.postorder();
+    //cout<<endl;
+
 }
