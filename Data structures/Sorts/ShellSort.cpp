@@ -32,3 +32,7 @@ int main() {
     
     return 0;
 }
+
+
+// basic idea is to use the close to best case scanario of insertion sort
+// uses less number of swaps to sort the array
