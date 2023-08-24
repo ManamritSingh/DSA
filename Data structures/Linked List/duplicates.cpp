@@ -72,7 +72,7 @@ public:
 };
 
 int main() {
-    int A[]={1,1,2,2,3,3};
+    int A[]={1,3,2,2,3,3};
     linkedlist l;
     l.create(A , 5);
     l.display(l.first);
